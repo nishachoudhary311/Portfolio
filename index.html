@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in;
+      color: black;
+      background-color: antiquewhite;
+    }
+
+    header {
+      background: rgb(66, 66, 66);
+      color: white;
+      padding: 20px;
+      animation: slideDown 0.8s ease-in-out;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    #home {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #ffcc00;
+      object-fit: cover;
+      object-position: center 20%; /* 👈 Top-center fix */
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+    .certificate img {
+       max-width: 100%;
+       height: 350px;
+       margin-top: 15px;
+       margin-left: 10px;
+       border-radius: 8px;
+       box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+    .objective {
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+     .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .flex-item {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    footer {
+      background: rgb(53, 53, 52);
+      color: rgb(131, 131, 226);
+      text-align: center;
+      padding: 15px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 100%;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin-bottom: 10px;
+      }
+
+      #home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <img src="Profile Photo.jpg" alt="My Photo" class="profile-pic" />
+     <div>
+    <h2>Nisha Choudhary</h2>
+    <p>Hi, BCA student learning web development and programming.</p>
+    <p>I am passionate about building beautiful and responsive websites. Currently, I’m exploring HTML, CSS and Programming in Java.</p>
+  </div>
+  </section>
+
+  <section id="about">
+  <h2>About Me</h2>
+  <p>
+    I'm a 2nd-year BCA student at Sri Balaji Engineering and Technology College, Jaipur. I'm passionate about cloud computing and currently training as a Salesforce Developer. 
+  </p>
+  <p>
+    I’ve built web projects like an Amazon Clone and a Jute Bag Website.
+  </p>
+   <p>
+    My areas of interest include cloud architecture, web development, and Salesforce development. I am dedicated to continuously learning new technologies and building real-world solutions that create value.
+  </p>
+</section>
+ <section id="objective">
+    <h2>Objective</h2>
+    <p>Motivated and focused Salesforce learner, aiming to apply technical skills and hands-on projects experience to contribute meaningfully to a growing organization. Interested in building and improving cloud-based solutions while learning from real-world challenges and collaborating with teams to achieve business goals.</p>
+  </section>
+
+  <section id="projects">
+  <h2>My Projects</h2>
+  
+  <div class="project">
+    <h3>Amazon Clone</h3>
+    <p>This is a responsive e-commerce website inspired by Amazon. Built using HTML and CSS, it features product layout, header, and footer design.</p>
+    <a href="https://github.com/nishachoudhary311/amazon-clone" target="_blank">View Project</a>
+  </div>
+
+  <div class="project">
+    <h3>Jute Bag Website</h3>
+    <p>A showcase + shopping website for eco-friendly jute bags. Created using HTML, CSS, and JavaScript. It includes product cards and light color theme.</p>
+    <a href="#" target="_blank">View Project</a> <!-- Add your link here -->
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+
+  <div class="certificate">
+    <h3>Java Programming Course for Beginners</h3>
+    <p>Issued by: Crio.Do | Year: 2025</p>
+    <img src= "certificate.jpg" alt="Java Certificate by Crio.Do">
+  </div>
+</section>
+
+<section class="flex-container">
+  
+  <div class="flex-item education">
+    <h2>Education</h2>
+    <p><strong>BCA (Bachelor of Computer Applications)</strong><br>
+      Sri Balaji Engineering and Technology College, Jaipur<br>
+      2023 – Present</p>
+      <p><strong>Senior Secondary (12th)</strong><br>
+        Rajasthan Board | 2022</p>
+        <p><strong>Secondary (10th)</strong><br>
+          Rajasthan Board | 2020</p>
+        </div>
+        <div class="flex-item skill">
+          <h2>Skills</h2>
+          <p><strong>Programming Languages: </strong>C language & Core Java</p>
+          <p><strong>Web development: </strong> HTML & CSS</p>
+        </div>
+      </section>
+      
+  <section id="contact">
+    <h2>Contact Me</h2>
+     <p>Email: 
+    <a href="mailto:nishadhayal2004@gmail.com">nishadhayal2004@gmail.com</a>
+  </p>
+    <p>Phone No.: +91-7240145268</p>
+    <p>LinkedIn: 
+    <a href="https://www.linkedin.com/in/nisha-choudhary01/" target="_blank">
+      linkedin.com/in/nisha-choudhary01
+    </a>
+  </p
+    <p>Location: Jaipur, Rajasthan, 333039</p>
+  </section>
+
+  <footer>
+    <p>© 2025 My Portfolio</p>
+  </footer>
+</body>
+</html>
